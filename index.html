@@ -384,7 +384,8 @@
 </head>
 <body>
     <div class="photo-container" id="photoContainer">
-        <img src="file:///C:/Users/legion/Desktop/bjj/bjjj.jpg" alt="卞俊跃照片" class="main-photo" id="mainPhoto">
+        <!-- 关键：使用相对路径，指向bjj文件夹中的照片 -->
+        <img src="bjj/bjjj.jpg" alt="卞俊跃照片" class="main-photo" id="mainPhoto">
     </div>
     
     <div class="heart-container" id="heartContainer">
@@ -393,7 +394,7 @@
     
     <!-- 封面 -->
     <div class="cover" id="cover">
-        <img src="file:///C:/Users/legion/Desktop/bjj/bjjj.jpg" alt="卞俊跃照片" class="cover-photo">
+        <img src="bjj/bjjj.jpg" alt="卞俊跃照片" class="cover-photo">
         <div class="cover-title">卞俊跃 我爱你</div>
         <button class="start-button" id="startButton">开始</button>
     </div>
@@ -425,8 +426,8 @@
             photoSpawnInterval: 5000, // 照片生成间隔
         };
         
-        // 照片URL - 所有照片都使用同一地址
-        const PHOTO_URL = "file:///C:/Users/legion/Desktop/bjj/bjjj.jpg";
+        // 照片URL - 使用相对路径
+        const PHOTO_URL = "bjj/bjjj.jpg";
         
         // 创建星空背景
         function createStars() {
@@ -661,4 +662,4 @@
         });
     </script>
 </body>
-</html>    
+</html>
